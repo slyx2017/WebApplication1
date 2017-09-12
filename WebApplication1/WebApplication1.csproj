@@ -53,6 +53,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -154,7 +156,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
@@ -170,16 +171,1017 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="AutoComboBox.aspx" />
+    <Content Include="Auto\autodata.xml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\easyUI\datagrid-detailview.js" />
+    <Content Include="Content\easyUI\jquery.easyui.min.js" />
+    <Content Include="Content\easyUI\jquery.min.js" />
+    <Content Include="Content\easyUI\locale\easyui-lang-zh_CN.js" />
+    <Content Include="Content\easyUI\plugins\jquery.accordion.js" />
+    <Content Include="Content\easyUI\plugins\jquery.calendar.js" />
+    <Content Include="Content\easyUI\plugins\jquery.combo.js" />
+    <Content Include="Content\easyUI\plugins\jquery.combobox.js" />
+    <Content Include="Content\easyUI\plugins\jquery.combogrid.js" />
+    <Content Include="Content\easyUI\plugins\jquery.combotree.js" />
+    <Content Include="Content\easyUI\plugins\jquery.combotreegrid.js" />
+    <Content Include="Content\easyUI\plugins\jquery.datagrid.js" />
+    <Content Include="Content\easyUI\plugins\jquery.datalist.js" />
+    <Content Include="Content\easyUI\plugins\jquery.datebox.js" />
+    <Content Include="Content\easyUI\plugins\jquery.datetimebox.js" />
+    <Content Include="Content\easyUI\plugins\jquery.datetimespinner.js" />
+    <Content Include="Content\easyUI\plugins\jquery.dialog.js" />
+    <Content Include="Content\easyUI\plugins\jquery.draggable.js" />
+    <Content Include="Content\easyUI\plugins\jquery.droppable.js" />
+    <Content Include="Content\easyUI\plugins\jquery.filebox.js" />
+    <Content Include="Content\easyUI\plugins\jquery.form.js" />
+    <Content Include="Content\easyUI\plugins\jquery.layout.js" />
+    <Content Include="Content\easyUI\plugins\jquery.linkbutton.js" />
+    <Content Include="Content\easyUI\plugins\jquery.menu.js" />
+    <Content Include="Content\easyUI\plugins\jquery.menubutton.js" />
+    <Content Include="Content\easyUI\plugins\jquery.messager.js" />
+    <Content Include="Content\easyUI\plugins\jquery.mobile.js" />
+    <Content Include="Content\easyUI\plugins\jquery.numberbox.js" />
+    <Content Include="Content\easyUI\plugins\jquery.numberspinner.js" />
+    <Content Include="Content\easyUI\plugins\jquery.pagination.js" />
+    <Content Include="Content\easyUI\plugins\jquery.panel.js" />
+    <Content Include="Content\easyUI\plugins\jquery.parser.js" />
+    <Content Include="Content\easyUI\plugins\jquery.passwordbox.js" />
+    <Content Include="Content\easyUI\plugins\jquery.progressbar.js" />
+    <Content Include="Content\easyUI\plugins\jquery.propertygrid.js" />
+    <Content Include="Content\easyUI\plugins\jquery.resizable.js" />
+    <Content Include="Content\easyUI\plugins\jquery.searchbox.js" />
+    <Content Include="Content\easyUI\plugins\jquery.slider.js" />
+    <Content Include="Content\easyUI\plugins\jquery.spinner.js" />
+    <Content Include="Content\easyUI\plugins\jquery.splitbutton.js" />
+    <Content Include="Content\easyUI\plugins\jquery.switchbutton.js" />
+    <Content Include="Content\easyUI\plugins\jquery.tabs.js" />
+    <Content Include="Content\easyUI\plugins\jquery.tagbox.js" />
+    <Content Include="Content\easyUI\plugins\jquery.textbox.js" />
+    <Content Include="Content\easyUI\plugins\jquery.timespinner.js" />
+    <Content Include="Content\easyUI\plugins\jquery.tooltip.js" />
+    <Content Include="Content\easyUI\plugins\jquery.tree.js" />
+    <Content Include="Content\easyUI\plugins\jquery.treegrid.js" />
+    <Content Include="Content\easyUI\plugins\jquery.validatebox.js" />
+    <Content Include="Content\easyUI\plugins\jquery.window.js" />
+    <Content Include="Content\easyUI\src\easyloader.js" />
+    <Content Include="Content\easyUI\src\jquery.accordion.js" />
+    <Content Include="Content\easyUI\src\jquery.calendar.js" />
+    <Content Include="Content\easyUI\src\jquery.combobox.js" />
+    <Content Include="Content\easyUI\src\jquery.datebox.js" />
+    <Content Include="Content\easyUI\src\jquery.draggable.js" />
+    <Content Include="Content\easyUI\src\jquery.droppable.js" />
+    <Content Include="Content\easyUI\src\jquery.form.js" />
+    <Content Include="Content\easyUI\src\jquery.linkbutton.js" />
+    <Content Include="Content\easyUI\src\jquery.menu.js" />
+    <Content Include="Content\easyUI\src\jquery.parser.js" />
+    <Content Include="Content\easyUI\src\jquery.progressbar.js" />
+    <Content Include="Content\easyUI\src\jquery.propertygrid.js" />
+    <Content Include="Content\easyUI\src\jquery.resizable.js" />
+    <Content Include="Content\easyUI\src\jquery.slider.js" />
+    <Content Include="Content\easyUI\src\jquery.tabs.js" />
+    <Content Include="Content\easyUI\src\jquery.window.js" />
+    <Content Include="Content\easyUI\themes\black\accordion.css" />
+    <Content Include="Content\easyUI\themes\black\calendar.css" />
+    <Content Include="Content\easyUI\themes\black\combo.css" />
+    <Content Include="Content\easyUI\themes\black\combobox.css" />
+    <Content Include="Content\easyUI\themes\black\datagrid.css" />
+    <Content Include="Content\easyUI\themes\black\datalist.css" />
+    <Content Include="Content\easyUI\themes\black\datebox.css" />
+    <Content Include="Content\easyUI\themes\black\dialog.css" />
+    <Content Include="Content\easyUI\themes\black\easyui.css" />
+    <Content Include="Content\easyUI\themes\black\filebox.css" />
+    <Content Include="Content\easyUI\themes\black\images\accordion_arrows.png" />
+    <Content Include="Content\easyUI\themes\black\images\blank.gif" />
+    <Content Include="Content\easyUI\themes\black\images\calendar_arrows.png" />
+    <Content Include="Content\easyUI\themes\black\images\combo_arrow.png" />
+    <Content Include="Content\easyUI\themes\black\images\datagrid_icons.png" />
+    <Content Include="Content\easyUI\themes\black\images\datebox_arrow.png" />
+    <Content Include="Content\easyUI\themes\black\images\layout_arrows.png" />
+    <Content Include="Content\easyUI\themes\black\images\linkbutton_bg.png" />
+    <Content Include="Content\easyUI\themes\black\images\loading.gif" />
+    <Content Include="Content\easyUI\themes\black\images\menu_arrows.png" />
+    <Content Include="Content\easyUI\themes\black\images\messager_icons.png" />
+    <Content Include="Content\easyUI\themes\black\images\pagination_icons.png" />
+    <Content Include="Content\easyUI\themes\black\images\panel_tools.png" />
+    <Content Include="Content\easyUI\themes\black\images\passwordbox_close.png" />
+    <Content Include="Content\easyUI\themes\black\images\passwordbox_open.png" />
+    <Content Include="Content\easyUI\themes\black\images\searchbox_button.png" />
+    <Content Include="Content\easyUI\themes\black\images\slider_handle.png" />
+    <Content Include="Content\easyUI\themes\black\images\spinner_arrows.png" />
+    <Content Include="Content\easyUI\themes\black\images\tabs_icons.png" />
+    <Content Include="Content\easyUI\themes\black\images\tagbox_icons.png" />
+    <Content Include="Content\easyUI\themes\black\images\tree_icons.png" />
+    <Content Include="Content\easyUI\themes\black\images\validatebox_warning.png" />
+    <Content Include="Content\easyUI\themes\black\layout.css" />
+    <Content Include="Content\easyUI\themes\black\linkbutton.css" />
+    <Content Include="Content\easyUI\themes\black\menu.css" />
+    <Content Include="Content\easyUI\themes\black\menubutton.css" />
+    <Content Include="Content\easyUI\themes\black\messager.css" />
+    <Content Include="Content\easyUI\themes\black\numberbox.css" />
+    <Content Include="Content\easyUI\themes\black\pagination.css" />
+    <Content Include="Content\easyUI\themes\black\panel.css" />
+    <Content Include="Content\easyUI\themes\black\passwordbox.css" />
+    <Content Include="Content\easyUI\themes\black\progressbar.css" />
+    <Content Include="Content\easyUI\themes\black\propertygrid.css" />
+    <Content Include="Content\easyUI\themes\black\searchbox.css" />
+    <Content Include="Content\easyUI\themes\black\slider.css" />
+    <Content Include="Content\easyUI\themes\black\spinner.css" />
+    <Content Include="Content\easyUI\themes\black\splitbutton.css" />
+    <Content Include="Content\easyUI\themes\black\switchbutton.css" />
+    <Content Include="Content\easyUI\themes\black\tabs.css" />
+    <Content Include="Content\easyUI\themes\black\tagbox.css" />
+    <Content Include="Content\easyUI\themes\black\textbox.css" />
+    <Content Include="Content\easyUI\themes\black\tooltip.css" />
+    <Content Include="Content\easyUI\themes\black\tree.css" />
+    <Content Include="Content\easyUI\themes\black\validatebox.css" />
+    <Content Include="Content\easyUI\themes\black\window.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\accordion.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\calendar.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\combo.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\combobox.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\datagrid.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\datalist.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\datebox.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\dialog.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\easyui.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\filebox.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\blank.gif" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\loading.gif" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\passwordbox_close.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\passwordbox_open.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\tagbox_icons.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="Content\easyUI\themes\bootstrap\layout.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\linkbutton.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\menu.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\menubutton.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\messager.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\numberbox.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\pagination.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\panel.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\passwordbox.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\progressbar.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\propertygrid.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\searchbox.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\slider.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\spinner.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\splitbutton.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\switchbutton.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\tabs.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\tagbox.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\textbox.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\tooltip.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\tree.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\validatebox.css" />
+    <Content Include="Content\easyUI\themes\bootstrap\window.css" />
+    <Content Include="Content\easyUI\themes\color.css" />
+    <Content Include="Content\easyUI\themes\default\accordion.css" />
+    <Content Include="Content\easyUI\themes\default\calendar.css" />
+    <Content Include="Content\easyUI\themes\default\combo.css" />
+    <Content Include="Content\easyUI\themes\default\combobox.css" />
+    <Content Include="Content\easyUI\themes\default\datagrid.css" />
+    <Content Include="Content\easyUI\themes\default\datalist.css" />
+    <Content Include="Content\easyUI\themes\default\datebox.css" />
+    <Content Include="Content\easyUI\themes\default\dialog.css" />
+    <Content Include="Content\easyUI\themes\default\easyui.css" />
+    <Content Include="Content\easyUI\themes\default\filebox.css" />
+    <Content Include="Content\easyUI\themes\default\images\accordion_arrows.png" />
+    <Content Include="Content\easyUI\themes\default\images\blank.gif" />
+    <Content Include="Content\easyUI\themes\default\images\calendar_arrows.png" />
+    <Content Include="Content\easyUI\themes\default\images\combo_arrow.png" />
+    <Content Include="Content\easyUI\themes\default\images\datagrid_icons.png" />
+    <Content Include="Content\easyUI\themes\default\images\datebox_arrow.png" />
+    <Content Include="Content\easyUI\themes\default\images\layout_arrows.png" />
+    <Content Include="Content\easyUI\themes\default\images\linkbutton_bg.png" />
+    <Content Include="Content\easyUI\themes\default\images\loading.gif" />
+    <Content Include="Content\easyUI\themes\default\images\menu_arrows.png" />
+    <Content Include="Content\easyUI\themes\default\images\messager_icons.png" />
+    <Content Include="Content\easyUI\themes\default\images\pagination_icons.png" />
+    <Content Include="Content\easyUI\themes\default\images\panel_tools.png" />
+    <Content Include="Content\easyUI\themes\default\images\passwordbox_close.png" />
+    <Content Include="Content\easyUI\themes\default\images\passwordbox_open.png" />
+    <Content Include="Content\easyUI\themes\default\images\searchbox_button.png" />
+    <Content Include="Content\easyUI\themes\default\images\slider_handle.png" />
+    <Content Include="Content\easyUI\themes\default\images\spinner_arrows.png" />
+    <Content Include="Content\easyUI\themes\default\images\tabs_icons.png" />
+    <Content Include="Content\easyUI\themes\default\images\tagbox_icons.png" />
+    <Content Include="Content\easyUI\themes\default\images\tree_icons.png" />
+    <Content Include="Content\easyUI\themes\default\images\validatebox_warning.png" />
+    <Content Include="Content\easyUI\themes\default\layout.css" />
+    <Content Include="Content\easyUI\themes\default\linkbutton.css" />
+    <Content Include="Content\easyUI\themes\default\menu.css" />
+    <Content Include="Content\easyUI\themes\default\menubutton.css" />
+    <Content Include="Content\easyUI\themes\default\messager.css" />
+    <Content Include="Content\easyUI\themes\default\numberbox.css" />
+    <Content Include="Content\easyUI\themes\default\pagination.css" />
+    <Content Include="Content\easyUI\themes\default\panel.css" />
+    <Content Include="Content\easyUI\themes\default\passwordbox.css" />
+    <Content Include="Content\easyUI\themes\default\progressbar.css" />
+    <Content Include="Content\easyUI\themes\default\propertygrid.css" />
+    <Content Include="Content\easyUI\themes\default\searchbox.css" />
+    <Content Include="Content\easyUI\themes\default\slider.css" />
+    <Content Include="Content\easyUI\themes\default\spinner.css" />
+    <Content Include="Content\easyUI\themes\default\splitbutton.css" />
+    <Content Include="Content\easyUI\themes\default\switchbutton.css" />
+    <Content Include="Content\easyUI\themes\default\tabs.css" />
+    <Content Include="Content\easyUI\themes\default\tagbox.css" />
+    <Content Include="Content\easyUI\themes\default\textbox.css" />
+    <Content Include="Content\easyUI\themes\default\tooltip.css" />
+    <Content Include="Content\easyUI\themes\default\tree.css" />
+    <Content Include="Content\easyUI\themes\default\validatebox.css" />
+    <Content Include="Content\easyUI\themes\default\window.css" />
+    <Content Include="Content\easyUI\themes\gray\accordion.css" />
+    <Content Include="Content\easyUI\themes\gray\calendar.css" />
+    <Content Include="Content\easyUI\themes\gray\combo.css" />
+    <Content Include="Content\easyUI\themes\gray\combobox.css" />
+    <Content Include="Content\easyUI\themes\gray\datagrid.css" />
+    <Content Include="Content\easyUI\themes\gray\datalist.css" />
+    <Content Include="Content\easyUI\themes\gray\datebox.css" />
+    <Content Include="Content\easyUI\themes\gray\dialog.css" />
+    <Content Include="Content\easyUI\themes\gray\easyui.css" />
+    <Content Include="Content\easyUI\themes\gray\filebox.css" />
+    <Content Include="Content\easyUI\themes\gray\images\accordion_arrows.png" />
+    <Content Include="Content\easyUI\themes\gray\images\blank.gif" />
+    <Content Include="Content\easyUI\themes\gray\images\calendar_arrows.png" />
+    <Content Include="Content\easyUI\themes\gray\images\combo_arrow.png" />
+    <Content Include="Content\easyUI\themes\gray\images\datagrid_icons.png" />
+    <Content Include="Content\easyUI\themes\gray\images\datebox_arrow.png" />
+    <Content Include="Content\easyUI\themes\gray\images\layout_arrows.png" />
+    <Content Include="Content\easyUI\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="Content\easyUI\themes\gray\images\loading.gif" />
+    <Content Include="Content\easyUI\themes\gray\images\menu_arrows.png" />
+    <Content Include="Content\easyUI\themes\gray\images\messager_icons.png" />
+    <Content Include="Content\easyUI\themes\gray\images\pagination_icons.png" />
+    <Content Include="Content\easyUI\themes\gray\images\panel_tools.png" />
+    <Content Include="Content\easyUI\themes\gray\images\passwordbox_close.png" />
+    <Content Include="Content\easyUI\themes\gray\images\passwordbox_open.png" />
+    <Content Include="Content\easyUI\themes\gray\images\searchbox_button.png" />
+    <Content Include="Content\easyUI\themes\gray\images\slider_handle.png" />
+    <Content Include="Content\easyUI\themes\gray\images\spinner_arrows.png" />
+    <Content Include="Content\easyUI\themes\gray\images\tabs_icons.png" />
+    <Content Include="Content\easyUI\themes\gray\images\tagbox_icons.png" />
+    <Content Include="Content\easyUI\themes\gray\images\tree_icons.png" />
+    <Content Include="Content\easyUI\themes\gray\images\validatebox_warning.png" />
+    <Content Include="Content\easyUI\themes\gray\layout.css" />
+    <Content Include="Content\easyUI\themes\gray\linkbutton.css" />
+    <Content Include="Content\easyUI\themes\gray\menu.css" />
+    <Content Include="Content\easyUI\themes\gray\menubutton.css" />
+    <Content Include="Content\easyUI\themes\gray\messager.css" />
+    <Content Include="Content\easyUI\themes\gray\numberbox.css" />
+    <Content Include="Content\easyUI\themes\gray\pagination.css" />
+    <Content Include="Content\easyUI\themes\gray\panel.css" />
+    <Content Include="Content\easyUI\themes\gray\passwordbox.css" />
+    <Content Include="Content\easyUI\themes\gray\progressbar.css" />
+    <Content Include="Content\easyUI\themes\gray\propertygrid.css" />
+    <Content Include="Content\easyUI\themes\gray\searchbox.css" />
+    <Content Include="Content\easyUI\themes\gray\slider.css" />
+    <Content Include="Content\easyUI\themes\gray\spinner.css" />
+    <Content Include="Content\easyUI\themes\gray\splitbutton.css" />
+    <Content Include="Content\easyUI\themes\gray\switchbutton.css" />
+    <Content Include="Content\easyUI\themes\gray\tabs.css" />
+    <Content Include="Content\easyUI\themes\gray\tagbox.css" />
+    <Content Include="Content\easyUI\themes\gray\textbox.css" />
+    <Content Include="Content\easyUI\themes\gray\tooltip.css" />
+    <Content Include="Content\easyUI\themes\gray\tree.css" />
+    <Content Include="Content\easyUI\themes\gray\validatebox.css" />
+    <Content Include="Content\easyUI\themes\gray\window.css" />
+    <Content Include="Content\easyUI\themes\icon.css" />
+    <Content Include="Content\easyUI\themes\icons\back.png" />
+    <Content Include="Content\easyUI\themes\icons\blank.gif" />
+    <Content Include="Content\easyUI\themes\icons\cancel.png" />
+    <Content Include="Content\easyUI\themes\icons\clear.png" />
+    <Content Include="Content\easyUI\themes\icons\cut.png" />
+    <Content Include="Content\easyUI\themes\icons\edit_add.png" />
+    <Content Include="Content\easyUI\themes\icons\edit_remove.png" />
+    <Content Include="Content\easyUI\themes\icons\filesave.png" />
+    <Content Include="Content\easyUI\themes\icons\filter.png" />
+    <Content Include="Content\easyUI\themes\icons\help.png" />
+    <Content Include="Content\easyUI\themes\icons\large_chart.png" />
+    <Content Include="Content\easyUI\themes\icons\large_clipart.png" />
+    <Content Include="Content\easyUI\themes\icons\large_picture.png" />
+    <Content Include="Content\easyUI\themes\icons\large_shapes.png" />
+    <Content Include="Content\easyUI\themes\icons\large_smartart.png" />
+    <Content Include="Content\easyUI\themes\icons\lock.png" />
+    <Content Include="Content\easyUI\themes\icons\man.png" />
+    <Content Include="Content\easyUI\themes\icons\mini_add.png" />
+    <Content Include="Content\easyUI\themes\icons\mini_edit.png" />
+    <Content Include="Content\easyUI\themes\icons\mini_refresh.png" />
+    <Content Include="Content\easyUI\themes\icons\more.png" />
+    <Content Include="Content\easyUI\themes\icons\no.png" />
+    <Content Include="Content\easyUI\themes\icons\ok.png" />
+    <Content Include="Content\easyUI\themes\icons\pencil.png" />
+    <Content Include="Content\easyUI\themes\icons\print.png" />
+    <Content Include="Content\easyUI\themes\icons\redo.png" />
+    <Content Include="Content\easyUI\themes\icons\reload.png" />
+    <Content Include="Content\easyUI\themes\icons\search.png" />
+    <Content Include="Content\easyUI\themes\icons\sum.png" />
+    <Content Include="Content\easyUI\themes\icons\tip.png" />
+    <Content Include="Content\easyUI\themes\icons\undo.png" />
+    <Content Include="Content\easyUI\themes\material\accordion.css" />
+    <Content Include="Content\easyUI\themes\material\calendar.css" />
+    <Content Include="Content\easyUI\themes\material\combo.css" />
+    <Content Include="Content\easyUI\themes\material\combobox.css" />
+    <Content Include="Content\easyUI\themes\material\datagrid.css" />
+    <Content Include="Content\easyUI\themes\material\datalist.css" />
+    <Content Include="Content\easyUI\themes\material\datebox.css" />
+    <Content Include="Content\easyUI\themes\material\dialog.css" />
+    <Content Include="Content\easyUI\themes\material\easyui.css" />
+    <Content Include="Content\easyUI\themes\material\filebox.css" />
+    <Content Include="Content\easyUI\themes\material\images\accordion_arrows.png" />
+    <Content Include="Content\easyUI\themes\material\images\blank.gif" />
+    <Content Include="Content\easyUI\themes\material\images\calendar_arrows.png" />
+    <Content Include="Content\easyUI\themes\material\images\combo_arrow.png" />
+    <Content Include="Content\easyUI\themes\material\images\datagrid_icons.png" />
+    <Content Include="Content\easyUI\themes\material\images\datebox_arrow.png" />
+    <Content Include="Content\easyUI\themes\material\images\layout_arrows.png" />
+    <Content Include="Content\easyUI\themes\material\images\linkbutton_bg.png" />
+    <Content Include="Content\easyUI\themes\material\images\loading.gif" />
+    <Content Include="Content\easyUI\themes\material\images\menu_arrows.png" />
+    <Content Include="Content\easyUI\themes\material\images\messager_icons.png" />
+    <Content Include="Content\easyUI\themes\material\images\pagination_icons.png" />
+    <Content Include="Content\easyUI\themes\material\images\panel_tools.png" />
+    <Content Include="Content\easyUI\themes\material\images\passwordbox_close.png" />
+    <Content Include="Content\easyUI\themes\material\images\passwordbox_open.png" />
+    <Content Include="Content\easyUI\themes\material\images\searchbox_button.png" />
+    <Content Include="Content\easyUI\themes\material\images\slider_handle.png" />
+    <Content Include="Content\easyUI\themes\material\images\spinner_arrows.png" />
+    <Content Include="Content\easyUI\themes\material\images\tabs_icons.png" />
+    <Content Include="Content\easyUI\themes\material\images\tagbox_icons.png" />
+    <Content Include="Content\easyUI\themes\material\images\tree_icons.png" />
+    <Content Include="Content\easyUI\themes\material\images\validatebox_warning.png" />
+    <Content Include="Content\easyUI\themes\material\layout.css" />
+    <Content Include="Content\easyUI\themes\material\linkbutton.css" />
+    <Content Include="Content\easyUI\themes\material\menu.css" />
+    <Content Include="Content\easyUI\themes\material\menubutton.css" />
+    <Content Include="Content\easyUI\themes\material\messager.css" />
+    <Content Include="Content\easyUI\themes\material\numberbox.css" />
+    <Content Include="Content\easyUI\themes\material\pagination.css" />
+    <Content Include="Content\easyUI\themes\material\panel.css" />
+    <Content Include="Content\easyUI\themes\material\passwordbox.css" />
+    <Content Include="Content\easyUI\themes\material\progressbar.css" />
+    <Content Include="Content\easyUI\themes\material\propertygrid.css" />
+    <Content Include="Content\easyUI\themes\material\searchbox.css" />
+    <Content Include="Content\easyUI\themes\material\slider.css" />
+    <Content Include="Content\easyUI\themes\material\spinner.css" />
+    <Content Include="Content\easyUI\themes\material\splitbutton.css" />
+    <Content Include="Content\easyUI\themes\material\switchbutton.css" />
+    <Content Include="Content\easyUI\themes\material\tabs.css" />
+    <Content Include="Content\easyUI\themes\material\tagbox.css" />
+    <Content Include="Content\easyUI\themes\material\textbox.css" />
+    <Content Include="Content\easyUI\themes\material\tooltip.css" />
+    <Content Include="Content\easyUI\themes\material\tree.css" />
+    <Content Include="Content\easyUI\themes\material\validatebox.css" />
+    <Content Include="Content\easyUI\themes\material\window.css" />
+    <Content Include="Content\easyUI\themes\metro\accordion.css" />
+    <Content Include="Content\easyUI\themes\metro\calendar.css" />
+    <Content Include="Content\easyUI\themes\metro\combo.css" />
+    <Content Include="Content\easyUI\themes\metro\combobox.css" />
+    <Content Include="Content\easyUI\themes\metro\datagrid.css" />
+    <Content Include="Content\easyUI\themes\metro\datalist.css" />
+    <Content Include="Content\easyUI\themes\metro\datebox.css" />
+    <Content Include="Content\easyUI\themes\metro\dialog.css" />
+    <Content Include="Content\easyUI\themes\metro\easyui.css" />
+    <Content Include="Content\easyUI\themes\metro\filebox.css" />
+    <Content Include="Content\easyUI\themes\metro\images\accordion_arrows.png" />
+    <Content Include="Content\easyUI\themes\metro\images\blank.gif" />
+    <Content Include="Content\easyUI\themes\metro\images\calendar_arrows.png" />
+    <Content Include="Content\easyUI\themes\metro\images\combo_arrow.png" />
+    <Content Include="Content\easyUI\themes\metro\images\datagrid_icons.png" />
+    <Content Include="Content\easyUI\themes\metro\images\datebox_arrow.png" />
+    <Content Include="Content\easyUI\themes\metro\images\layout_arrows.png" />
+    <Content Include="Content\easyUI\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="Content\easyUI\themes\metro\images\loading.gif" />
+    <Content Include="Content\easyUI\themes\metro\images\menu_arrows.png" />
+    <Content Include="Content\easyUI\themes\metro\images\messager_icons.png" />
+    <Content Include="Content\easyUI\themes\metro\images\pagination_icons.png" />
+    <Content Include="Content\easyUI\themes\metro\images\panel_tools.png" />
+    <Content Include="Content\easyUI\themes\metro\images\passwordbox_close.png" />
+    <Content Include="Content\easyUI\themes\metro\images\passwordbox_open.png" />
+    <Content Include="Content\easyUI\themes\metro\images\searchbox_button.png" />
+    <Content Include="Content\easyUI\themes\metro\images\slider_handle.png" />
+    <Content Include="Content\easyUI\themes\metro\images\spinner_arrows.png" />
+    <Content Include="Content\easyUI\themes\metro\images\tabs_icons.png" />
+    <Content Include="Content\easyUI\themes\metro\images\tagbox_icons.png" />
+    <Content Include="Content\easyUI\themes\metro\images\tree_icons.png" />
+    <Content Include="Content\easyUI\themes\metro\images\validatebox_warning.png" />
+    <Content Include="Content\easyUI\themes\metro\layout.css" />
+    <Content Include="Content\easyUI\themes\metro\linkbutton.css" />
+    <Content Include="Content\easyUI\themes\metro\menu.css" />
+    <Content Include="Content\easyUI\themes\metro\menubutton.css" />
+    <Content Include="Content\easyUI\themes\metro\messager.css" />
+    <Content Include="Content\easyUI\themes\metro\numberbox.css" />
+    <Content Include="Content\easyUI\themes\metro\pagination.css" />
+    <Content Include="Content\easyUI\themes\metro\panel.css" />
+    <Content Include="Content\easyUI\themes\metro\passwordbox.css" />
+    <Content Include="Content\easyUI\themes\metro\progressbar.css" />
+    <Content Include="Content\easyUI\themes\metro\propertygrid.css" />
+    <Content Include="Content\easyUI\themes\metro\searchbox.css" />
+    <Content Include="Content\easyUI\themes\metro\slider.css" />
+    <Content Include="Content\easyUI\themes\metro\spinner.css" />
+    <Content Include="Content\easyUI\themes\metro\splitbutton.css" />
+    <Content Include="Content\easyUI\themes\metro\switchbutton.css" />
+    <Content Include="Content\easyUI\themes\metro\tabs.css" />
+    <Content Include="Content\easyUI\themes\metro\tagbox.css" />
+    <Content Include="Content\easyUI\themes\metro\textbox.css" />
+    <Content Include="Content\easyUI\themes\metro\tooltip.css" />
+    <Content Include="Content\easyUI\themes\metro\tree.css" />
+    <Content Include="Content\easyUI\themes\metro\validatebox.css" />
+    <Content Include="Content\easyUI\themes\metro\window.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="image\1\100.jpg" />
+    <Content Include="image\1\1002.jpg" />
+    <Content Include="image\1\1008.jpg" />
+    <Content Include="image\1\1009.jpg" />
+    <Content Include="image\1\1014.jpg" />
+    <Content Include="image\1\1017.jpg" />
+    <Content Include="image\1\1020.jpg" />
+    <Content Include="image\1\1032.jpg" />
+    <Content Include="image\1\1036.jpg" />
+    <Content Include="image\1\1039.jpg" />
+    <Content Include="image\1\1060.jpg" />
+    <Content Include="image\1\1062.jpg" />
+    <Content Include="image\1\107.jpg" />
+    <Content Include="image\1\1070.jpg" />
+    <Content Include="image\1\1089.jpg" />
+    <Content Include="image\1\1091.jpg" />
+    <Content Include="image\1\111.jpg" />
+    <Content Include="image\1\1112.jpg" />
+    <Content Include="image\1\1117.jpg" />
+    <Content Include="image\1\112.jpg" />
+    <Content Include="image\1\1121.jpg" />
+    <Content Include="image\1\1123.jpg" />
+    <Content Include="image\1\1139.jpg" />
+    <Content Include="image\1\1143.jpg" />
+    <Content Include="image\1\1147.jpg" />
+    <Content Include="image\1\116.jpg" />
+    <Content Include="image\1\1167.jpg" />
+    <Content Include="image\1\1175.jpg" />
+    <Content Include="image\1\1181.jpg" />
+    <Content Include="image\1\1188.jpg" />
+    <Content Include="image\1\1200.jpg" />
+    <Content Include="image\1\1205.jpg" />
+    <Content Include="image\1\1215.jpg" />
+    <Content Include="image\1\1222.jpg" />
+    <Content Include="image\1\1223.jpg" />
+    <Content Include="image\1\1233.jpg" />
+    <Content Include="image\1\1238.jpg" />
+    <Content Include="image\1\1242.jpg" />
+    <Content Include="image\1\1257.jpg" />
+    <Content Include="image\1\127.jpg" />
+    <Content Include="image\1\1271.jpg" />
+    <Content Include="image\1\129.jpg" />
+    <Content Include="image\1\1290.jpg" />
+    <Content Include="image\1\1297.jpg" />
+    <Content Include="image\1\1302.jpg" />
+    <Content Include="image\1\1314.jpg" />
+    <Content Include="image\1\1321.jpg" />
+    <Content Include="image\1\1327.jpg" />
+    <Content Include="image\1\1344.jpg" />
+    <Content Include="image\1\1353.jpg" />
+    <Content Include="image\1\1356.jpg" />
+    <Content Include="image\1\1358.jpg" />
+    <Content Include="image\1\1374.jpg" />
+    <Content Include="image\1\1384.jpg" />
+    <Content Include="image\1\1389.jpg" />
+    <Content Include="image\1\139.jpg" />
+    <Content Include="image\1\1391.jpg" />
+    <Content Include="image\1\1408.jpg" />
+    <Content Include="image\1\141.jpg" />
+    <Content Include="image\1\1415.jpg" />
+    <Content Include="image\1\1423.jpg" />
+    <Content Include="image\1\1428.jpg" />
+    <Content Include="image\1\1436.jpg" />
+    <Content Include="image\1\1445.jpg" />
+    <Content Include="image\1\1451.jpg" />
+    <Content Include="image\1\1463.jpg" />
+    <Content Include="image\1\1470.jpg" />
+    <Content Include="image\1\1481.jpg" />
+    <Content Include="image\1\1486.jpg" />
+    <Content Include="image\1\149.jpg" />
+    <Content Include="image\1\1492.jpg" />
+    <Content Include="image\1\1501.jpg" />
+    <Content Include="image\1\1509.jpg" />
+    <Content Include="image\1\1522.jpg" />
+    <Content Include="image\1\1526.jpg" />
+    <Content Include="image\1\1528.jpg" />
+    <Content Include="image\1\1540.jpg" />
+    <Content Include="image\1\1544.jpg" />
+    <Content Include="image\1\1547.jpg" />
+    <Content Include="image\1\1559.jpg" />
+    <Content Include="image\1\1563.jpg" />
+    <Content Include="image\1\1571.jpg" />
+    <Content Include="image\1\1574.jpg" />
+    <Content Include="image\1\158.jpg" />
+    <Content Include="image\1\1582.jpg" />
+    <Content Include="image\1\1583.jpg" />
+    <Content Include="image\1\1584.jpg" />
+    <Content Include="image\1\1588.jpg" />
+    <Content Include="image\1\1599.jpg" />
+    <Content Include="image\1\1615.jpg" />
+    <Content Include="image\1\1628.jpg" />
+    <Content Include="image\1\1632.jpg" />
+    <Content Include="image\1\1636.jpg" />
+    <Content Include="image\1\164.jpg" />
+    <Content Include="image\1\1642.jpg" />
+    <Content Include="image\1\1657.jpg" />
+    <Content Include="image\1\1662.jpg" />
+    <Content Include="image\1\1673.jpg" />
+    <Content Include="image\1\1679.jpg" />
+    <Content Include="image\1\1682.jpg" />
+    <Content Include="image\1\170.jpg" />
+    <Content Include="image\1\1702.jpg" />
+    <Content Include="image\1\1708.jpg" />
+    <Content Include="image\1\1715.jpg" />
+    <Content Include="image\1\1716.jpg" />
+    <Content Include="image\1\1720.jpg" />
+    <Content Include="image\1\1722.jpg" />
+    <Content Include="image\1\1728.jpg" />
+    <Content Include="image\1\1730.jpg" />
+    <Content Include="image\1\1733.jpg" />
+    <Content Include="image\1\1734.jpg" />
+    <Content Include="image\1\1736.jpg" />
+    <Content Include="image\1\1740.jpg" />
+    <Content Include="image\1\1747.jpg" />
+    <Content Include="image\1\1753.jpg" />
+    <Content Include="image\1\1755.jpg" />
+    <Content Include="image\1\177.jpg" />
+    <Content Include="image\1\1775.jpg" />
+    <Content Include="image\1\1780.jpg" />
+    <Content Include="image\1\1825.jpg" />
+    <Content Include="image\1\1834.jpg" />
+    <Content Include="image\1\1846.jpg" />
+    <Content Include="image\1\1854.jpg" />
+    <Content Include="image\1\1868.jpg" />
+    <Content Include="image\1\1871.jpg" />
+    <Content Include="image\1\1881.jpg" />
+    <Content Include="image\1\1897.jpg" />
+    <Content Include="image\1\1900.jpg" />
+    <Content Include="image\1\1907.jpg" />
+    <Content Include="image\1\1916.jpg" />
+    <Content Include="image\1\1921.jpg" />
+    <Content Include="image\1\1925.jpg" />
+    <Content Include="image\1\193.jpg" />
+    <Content Include="image\1\1934.jpg" />
+    <Content Include="image\1\1937.jpg" />
+    <Content Include="image\1\1942.jpg" />
+    <Content Include="image\1\1944.jpg" />
+    <Content Include="image\1\1951.jpg" />
+    <Content Include="image\1\1952.jpg" />
+    <Content Include="image\1\1954.jpg" />
+    <Content Include="image\1\196.jpg" />
+    <Content Include="image\1\1962.jpg" />
+    <Content Include="image\1\1971.jpg" />
+    <Content Include="image\1\1977.jpg" />
+    <Content Include="image\1\1979.jpg" />
+    <Content Include="image\1\1985.jpg" />
+    <Content Include="image\1\1987.jpg" />
+    <Content Include="image\1\1994.jpg" />
+    <Content Include="image\1\1997.jpg" />
+    <Content Include="image\1\1998.jpg" />
+    <Content Include="image\1\2000.jpg" />
+    <Content Include="image\1\2002.jpg" />
+    <Content Include="image\1\2003.jpg" />
+    <Content Include="image\1\2004.jpg" />
+    <Content Include="image\1\2013.jpg" />
+    <Content Include="image\1\2016.jpg" />
+    <Content Include="image\1\2020.jpg" />
+    <Content Include="image\1\2032.jpg" />
+    <Content Include="image\1\2034.jpg" />
+    <Content Include="image\1\2036.jpg" />
+    <Content Include="image\1\2039.jpg" />
+    <Content Include="image\1\204.jpg" />
+    <Content Include="image\1\2050.jpg" />
+    <Content Include="image\1\2052.jpg" />
+    <Content Include="image\1\2053.jpg" />
+    <Content Include="image\1\2057.jpg" />
+    <Content Include="image\1\2068.jpg" />
+    <Content Include="image\1\2072.jpg" />
+    <Content Include="image\1\2097.jpg" />
+    <Content Include="image\1\210.jpg" />
+    <Content Include="image\1\2106.jpg" />
+    <Content Include="image\1\2117.jpg" />
+    <Content Include="image\1\2125.jpg" />
+    <Content Include="image\1\2133.jpg" />
+    <Content Include="image\1\2137.jpg" />
+    <Content Include="image\1\2140.jpg" />
+    <Content Include="image\1\2144.jpg" />
+    <Content Include="image\1\2151.jpg" />
+    <Content Include="image\1\2152.jpg" />
+    <Content Include="image\1\2201.jpg" />
+    <Content Include="image\1\2202.jpg" />
+    <Content Include="image\1\2209.jpg" />
+    <Content Include="image\1\2210.jpg" />
+    <Content Include="image\1\2224.jpg" />
+    <Content Include="image\1\2238.jpg" />
+    <Content Include="image\1\2240.jpg" />
+    <Content Include="image\1\2250.jpg" />
+    <Content Include="image\1\2261.jpg" />
+    <Content Include="image\1\2263.jpg" />
+    <Content Include="image\1\2273.jpg" />
+    <Content Include="image\1\2279.jpg" />
+    <Content Include="image\1\229.jpg" />
+    <Content Include="image\1\2298.jpg" />
+    <Content Include="image\1\2302.jpg" />
+    <Content Include="image\1\2308.jpg" />
+    <Content Include="image\1\2309.jpg" />
+    <Content Include="image\1\2316.jpg" />
+    <Content Include="image\1\2329.jpg" />
+    <Content Include="image\1\2331.jpg" />
+    <Content Include="image\1\2333.jpg" />
+    <Content Include="image\1\2338.jpg" />
+    <Content Include="image\1\2341.jpg" />
+    <Content Include="image\1\2345.jpg" />
+    <Content Include="image\1\2346.jpg" />
+    <Content Include="image\1\2347.jpg" />
+    <Content Include="image\1\2350.jpg" />
+    <Content Include="image\1\2351.jpg" />
+    <Content Include="image\1\2353.jpg" />
+    <Content Include="image\1\2356.jpg" />
+    <Content Include="image\1\2361.jpg" />
+    <Content Include="image\1\2364.jpg" />
+    <Content Include="image\1\2365.jpg" />
+    <Content Include="image\1\238.jpg" />
+    <Content Include="image\1\2386.jpg" />
+    <Content Include="image\1\2391.jpg" />
+    <Content Include="image\1\2392.jpg" />
+    <Content Include="image\1\24.jpg" />
+    <Content Include="image\1\2400.jpg" />
+    <Content Include="image\1\2407.jpg" />
+    <Content Include="image\1\2408.jpg" />
+    <Content Include="image\1\2415.jpg" />
+    <Content Include="image\1\2417.jpg" />
+    <Content Include="image\1\2419.jpg" />
+    <Content Include="image\1\2421.jpg" />
+    <Content Include="image\1\2425.jpg" />
+    <Content Include="image\1\2433.jpg" />
+    <Content Include="image\1\2434.jpg" />
+    <Content Include="image\1\2436.jpg" />
+    <Content Include="image\1\2443.jpg" />
+    <Content Include="image\1\2444.jpg" />
+    <Content Include="image\1\2445.jpg" />
+    <Content Include="image\1\2452.jpg" />
+    <Content Include="image\1\2453.jpg" />
+    <Content Include="image\1\2458.jpg" />
+    <Content Include="image\1\2466.jpg" />
+    <Content Include="image\1\2469.jpg" />
+    <Content Include="image\1\2471.jpg" />
+    <Content Include="image\1\2485.jpg" />
+    <Content Include="image\1\2487.jpg" />
+    <Content Include="image\1\2495.jpg" />
+    <Content Include="image\1\250.jpg" />
+    <Content Include="image\1\2500.jpg" />
+    <Content Include="image\1\2503.jpg" />
+    <Content Include="image\1\2515.jpg" />
+    <Content Include="image\1\2516.jpg" />
+    <Content Include="image\1\2524.jpg" />
+    <Content Include="image\1\2528.jpg" />
+    <Content Include="image\1\2529.jpg" />
+    <Content Include="image\1\2531.jpg" />
+    <Content Include="image\1\2532.jpg" />
+    <Content Include="image\1\2533.jpg" />
+    <Content Include="image\1\2534.jpg" />
+    <Content Include="image\1\2546.jpg" />
+    <Content Include="image\1\2547.jpg" />
+    <Content Include="image\1\2549.jpg" />
+    <Content Include="image\1\2553.jpg" />
+    <Content Include="image\1\2564.jpg" />
+    <Content Include="image\1\2594.jpg" />
+    <Content Include="image\1\2597.jpg" />
+    <Content Include="image\1\2598.jpg" />
+    <Content Include="image\1\260.jpg" />
+    <Content Include="image\1\2606.jpg" />
+    <Content Include="image\1\2608.jpg" />
+    <Content Include="image\1\2614.jpg" />
+    <Content Include="image\1\2617.jpg" />
+    <Content Include="image\1\2628.jpg" />
+    <Content Include="image\1\2634.jpg" />
+    <Content Include="image\1\2648.jpg" />
+    <Content Include="image\1\265.jpg" />
+    <Content Include="image\1\266.jpg" />
+    <Content Include="image\1\2663.jpg" />
+    <Content Include="image\1\2665.jpg" />
+    <Content Include="image\1\2668.jpg" />
+    <Content Include="image\1\2685.jpg" />
+    <Content Include="image\1\2690.jpg" />
+    <Content Include="image\1\2697.jpg" />
+    <Content Include="image\1\270.jpg" />
+    <Content Include="image\1\2706.jpg" />
+    <Content Include="image\1\2714.jpg" />
+    <Content Include="image\1\272.jpg" />
+    <Content Include="image\1\2721.jpg" />
+    <Content Include="image\1\2728.jpg" />
+    <Content Include="image\1\2741.jpg" />
+    <Content Include="image\1\2749.jpg" />
+    <Content Include="image\1\2758.jpg" />
+    <Content Include="image\1\2785.jpg" />
+    <Content Include="image\1\2786.jpg" />
+    <Content Include="image\1\2789.jpg" />
+    <Content Include="image\1\2819.jpg" />
+    <Content Include="image\1\2820.jpg" />
+    <Content Include="image\1\2826.jpg" />
+    <Content Include="image\1\2827.jpg" />
+    <Content Include="image\1\2846.jpg" />
+    <Content Include="image\1\285.jpg" />
+    <Content Include="image\1\2853.jpg" />
+    <Content Include="image\1\2859.jpg" />
+    <Content Include="image\1\2861.jpg" />
+    <Content Include="image\1\2871.jpg" />
+    <Content Include="image\1\2877.jpg" />
+    <Content Include="image\1\288.jpg" />
+    <Content Include="image\1\2880.jpg" />
+    <Content Include="image\1\2917.jpg" />
+    <Content Include="image\1\292.jpg" />
+    <Content Include="image\1\2920.jpg" />
+    <Content Include="image\1\2929.jpg" />
+    <Content Include="image\1\2937.jpg" />
+    <Content Include="image\1\2944.jpg" />
+    <Content Include="image\1\2955.jpg" />
+    <Content Include="image\1\2969.jpg" />
+    <Content Include="image\1\297.jpg" />
+    <Content Include="image\1\2972.jpg" />
+    <Content Include="image\1\2978.jpg" />
+    <Content Include="image\1\2980.jpg" />
+    <Content Include="image\1\2984.jpg" />
+    <Content Include="image\1\2988.jpg" />
+    <Content Include="image\1\299.jpg" />
+    <Content Include="image\1\3020.jpg" />
+    <Content Include="image\1\3023.jpg" />
+    <Content Include="image\1\3026.jpg" />
+    <Content Include="image\1\3042.jpg" />
+    <Content Include="image\1\3064.jpg" />
+    <Content Include="image\1\3072.jpg" />
+    <Content Include="image\1\3083.jpg" />
+    <Content Include="image\1\3093.jpg" />
+    <Content Include="image\1\3094.jpg" />
+    <Content Include="image\1\3101.jpg" />
+    <Content Include="image\1\3104.jpg" />
+    <Content Include="image\1\3108.jpg" />
+    <Content Include="image\1\3109.jpg" />
+    <Content Include="image\1\3110.jpg" />
+    <Content Include="image\1\3112.jpg" />
+    <Content Include="image\1\3117.jpg" />
+    <Content Include="image\1\314.jpg" />
+    <Content Include="image\1\3175.jpg" />
+    <Content Include="image\1\3188.jpg" />
+    <Content Include="image\1\319.jpg" />
+    <Content Include="image\1\3193.jpg" />
+    <Content Include="image\1\3233.jpg" />
+    <Content Include="image\1\3254.jpg" />
+    <Content Include="image\1\3263.jpg" />
+    <Content Include="image\1\3280.jpg" />
+    <Content Include="image\1\3304.jpg" />
+    <Content Include="image\1\3315.jpg" />
+    <Content Include="image\1\3316.jpg" />
+    <Content Include="image\1\3317.jpg" />
+    <Content Include="image\1\3318.jpg" />
+    <Content Include="image\1\3319.jpg" />
+    <Content Include="image\1\3348.jpg" />
+    <Content Include="image\1\3378.jpg" />
+    <Content Include="image\1\3381.jpg" />
+    <Content Include="image\1\3439.jpg" />
+    <Content Include="image\1\3446.jpg" />
+    <Content Include="image\1\3468.jpg" />
+    <Content Include="image\1\3493.jpg" />
+    <Content Include="image\1\3496.jpg" />
+    <Content Include="image\1\3497.jpg" />
+    <Content Include="image\1\35.jpg" />
+    <Content Include="image\1\3517.jpg" />
+    <Content Include="image\1\352.jpg" />
+    <Content Include="image\1\3520.jpg" />
+    <Content Include="image\1\3521.jpg" />
+    <Content Include="image\1\355.jpg" />
+    <Content Include="image\1\368.jpg" />
+    <Content Include="image\1\377.jpg" />
+    <Content Include="image\1\38.jpg" />
+    <Content Include="image\1\380.jpg" />
+    <Content Include="image\1\385.jpg" />
+    <Content Include="image\1\398.jpg" />
+    <Content Include="image\1\414.jpg" />
+    <Content Include="image\1\415.jpg" />
+    <Content Include="image\1\421.jpg" />
+    <Content Include="image\1\43.jpg" />
+    <Content Include="image\1\433.jpg" />
+    <Content Include="image\1\453.jpg" />
+    <Content Include="image\1\455.jpg" />
+    <Content Include="image\1\469.jpg" />
+    <Content Include="image\1\482.jpg" />
+    <Content Include="image\1\488.jpg" />
+    <Content Include="image\1\491.jpg" />
+    <Content Include="image\1\493.jpg" />
+    <Content Include="image\1\496.jpg" />
+    <Content Include="image\1\512.jpg" />
+    <Content Include="image\1\524.jpg" />
+    <Content Include="image\1\533.jpg" />
+    <Content Include="image\1\539.jpg" />
+    <Content Include="image\1\547.jpg" />
+    <Content Include="image\1\568.jpg" />
+    <Content Include="image\1\574.jpg" />
+    <Content Include="image\1\578.jpg" />
+    <Content Include="image\1\592.jpg" />
+    <Content Include="image\1\597.jpg" />
+    <Content Include="image\1\601.jpg" />
+    <Content Include="image\1\605.jpg" />
+    <Content Include="image\1\626.jpg" />
+    <Content Include="image\1\63.jpg" />
+    <Content Include="image\1\633.jpg" />
+    <Content Include="image\1\637.jpg" />
+    <Content Include="image\1\644.jpg" />
+    <Content Include="image\1\649.jpg" />
+    <Content Include="image\1\65.jpg" />
+    <Content Include="image\1\650.jpg" />
+    <Content Include="image\1\655.jpg" />
+    <Content Include="image\1\666.jpg" />
+    <Content Include="image\1\673.jpg" />
+    <Content Include="image\1\678.jpg" />
+    <Content Include="image\1\682.jpg" />
+    <Content Include="image\1\696.jpg" />
+    <Content Include="image\1\710.jpg" />
+    <Content Include="image\1\72.jpg" />
+    <Content Include="image\1\722.jpg" />
+    <Content Include="image\1\723.jpg" />
+    <Content Include="image\1\724.jpg" />
+    <Content Include="image\1\726.jpg" />
+    <Content Include="image\1\728.jpg" />
+    <Content Include="image\1\729.jpg" />
+    <Content Include="image\1\73.jpg" />
+    <Content Include="image\1\733.jpg" />
+    <Content Include="image\1\735.jpg" />
+    <Content Include="image\1\737.jpg" />
+    <Content Include="image\1\743.jpg" />
+    <Content Include="image\1\755.jpg" />
+    <Content Include="image\1\769.jpg" />
+    <Content Include="image\1\771.jpg" />
+    <Content Include="image\1\775.jpg" />
+    <Content Include="image\1\784.jpg" />
+    <Content Include="image\1\792.jpg" />
+    <Content Include="image\1\796.jpg" />
+    <Content Include="image\1\797.jpg" />
+    <Content Include="image\1\813.jpg" />
+    <Content Include="image\1\83.jpg" />
+    <Content Include="image\1\830.jpg" />
+    <Content Include="image\1\844.jpg" />
+    <Content Include="image\1\863.jpg" />
+    <Content Include="image\1\864.jpg" />
+    <Content Include="image\1\867.jpg" />
+    <Content Include="image\1\87.jpg" />
+    <Content Include="image\1\879.jpg" />
+    <Content Include="image\1\896.jpg" />
+    <Content Include="image\1\897.jpg" />
+    <Content Include="image\1\9.jpg" />
+    <Content Include="image\1\909.jpg" />
+    <Content Include="image\1\911.jpg" />
+    <Content Include="image\1\921.jpg" />
+    <Content Include="image\1\937.jpg" />
+    <Content Include="image\1\941.jpg" />
+    <Content Include="image\1\942.jpg" />
+    <Content Include="image\1\944.jpg" />
+    <Content Include="image\1\95.jpg" />
+    <Content Include="image\1\954.jpg" />
+    <Content Include="image\1\963.jpg" />
+    <Content Include="image\1\968.jpg" />
+    <Content Include="image\1\974.jpg" />
+    <Content Include="image\1\983.jpg" />
+    <Content Include="image\1\986.jpg" />
+    <Content Include="image\1\998.jpg" />
+    <Content Include="image\weather\0.gif" />
+    <Content Include="image\weather\1.gif" />
+    <Content Include="image\weather\10.gif" />
+    <Content Include="image\weather\11.gif" />
+    <Content Include="image\weather\12.gif" />
+    <Content Include="image\weather\13.gif" />
+    <Content Include="image\weather\14.gif" />
+    <Content Include="image\weather\15.gif" />
+    <Content Include="image\weather\16.gif" />
+    <Content Include="image\weather\17.gif" />
+    <Content Include="image\weather\18.gif" />
+    <Content Include="image\weather\19.gif" />
+    <Content Include="image\weather\2.gif" />
+    <Content Include="image\weather\20.gif" />
+    <Content Include="image\weather\21.gif" />
+    <Content Include="image\weather\22.gif" />
+    <Content Include="image\weather\23.gif" />
+    <Content Include="image\weather\24.gif" />
+    <Content Include="image\weather\25.gif" />
+    <Content Include="image\weather\26.gif" />
+    <Content Include="image\weather\27.gif" />
+    <Content Include="image\weather\28.gif" />
+    <Content Include="image\weather\29.gif" />
+    <Content Include="image\weather\3.gif" />
+    <Content Include="image\weather\30.gif" />
+    <Content Include="image\weather\31.gif" />
+    <Content Include="image\weather\4.gif" />
+    <Content Include="image\weather\5.gif" />
+    <Content Include="image\weather\6.gif" />
+    <Content Include="image\weather\7.gif" />
+    <Content Include="image\weather\8.gif" />
+    <Content Include="image\weather\9.gif" />
+    <Content Include="image\weather\a_0.gif" />
+    <Content Include="image\weather\a_1.gif" />
+    <Content Include="image\weather\a_10.gif" />
+    <Content Include="image\weather\a_11.gif" />
+    <Content Include="image\weather\a_12.gif" />
+    <Content Include="image\weather\a_13.gif" />
+    <Content Include="image\weather\a_14.gif" />
+    <Content Include="image\weather\a_15.gif" />
+    <Content Include="image\weather\a_16.gif" />
+    <Content Include="image\weather\a_17.gif" />
+    <Content Include="image\weather\a_18.gif" />
+    <Content Include="image\weather\a_19.gif" />
+    <Content Include="image\weather\a_2.gif" />
+    <Content Include="image\weather\a_20.gif" />
+    <Content Include="image\weather\a_21.gif" />
+    <Content Include="image\weather\a_22.gif" />
+    <Content Include="image\weather\a_23.gif" />
+    <Content Include="image\weather\a_24.gif" />
+    <Content Include="image\weather\a_25.gif" />
+    <Content Include="image\weather\a_26.gif" />
+    <Content Include="image\weather\a_27.gif" />
+    <Content Include="image\weather\a_28.gif" />
+    <Content Include="image\weather\a_29.gif" />
+    <Content Include="image\weather\a_3.gif" />
+    <Content Include="image\weather\a_30.gif" />
+    <Content Include="image\weather\a_31.gif" />
+    <Content Include="image\weather\a_4.gif" />
+    <Content Include="image\weather\a_5.gif" />
+    <Content Include="image\weather\a_6.gif" />
+    <Content Include="image\weather\a_7.gif" />
+    <Content Include="image\weather\a_8.gif" />
+    <Content Include="image\weather\a_9.gif" />
+    <Content Include="image\weather\a_nothing.gif" />
+    <Content Include="image\weather\b_0.gif" />
+    <Content Include="image\weather\b_1.gif" />
+    <Content Include="image\weather\b_10.gif" />
+    <Content Include="image\weather\b_11.gif" />
+    <Content Include="image\weather\b_12.gif" />
+    <Content Include="image\weather\b_13.gif" />
+    <Content Include="image\weather\b_14.gif" />
+    <Content Include="image\weather\b_15.gif" />
+    <Content Include="image\weather\b_16.gif" />
+    <Content Include="image\weather\b_17.gif" />
+    <Content Include="image\weather\b_18.gif" />
+    <Content Include="image\weather\b_19.gif" />
+    <Content Include="image\weather\b_2.gif" />
+    <Content Include="image\weather\b_20.gif" />
+    <Content Include="image\weather\b_21.gif" />
+    <Content Include="image\weather\b_22.gif" />
+    <Content Include="image\weather\b_23.gif" />
+    <Content Include="image\weather\b_24.gif" />
+    <Content Include="image\weather\b_25.gif" />
+    <Content Include="image\weather\b_26.gif" />
+    <Content Include="image\weather\b_27.gif" />
+    <Content Include="image\weather\b_28.gif" />
+    <Content Include="image\weather\b_29.gif" />
+    <Content Include="image\weather\b_3.gif" />
+    <Content Include="image\weather\b_30.gif" />
+    <Content Include="image\weather\b_31.gif" />
+    <Content Include="image\weather\b_4.gif" />
+    <Content Include="image\weather\b_5.gif" />
+    <Content Include="image\weather\b_6.gif" />
+    <Content Include="image\weather\b_7.gif" />
+    <Content Include="image\weather\b_8.gif" />
+    <Content Include="image\weather\b_9.gif" />
+    <Content Include="image\weather\b_nothing.gif" />
+    <Content Include="image\weather\nothing.gif" />
+    <Content Include="image\weather\Read me.txt" />
+    <Content Include="image\weather\r_b.gif" />
+    <Content Include="image\weather\r_t1.gif" />
+    <Content Include="image\weather\tem1.gif" />
+    <Content Include="image\weather\tem2.gif" />
+    <Content Include="image\weather\tem3.gif" />
+    <Content Include="image\weather\tem4.gif" />
+    <Content Include="image\weather\tem5.gif" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Content\easyUI\themes\material\images\Thumbs.db" />
+    <Content Include="Ashx\comboboxData.ashx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Index.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -209,17 +1211,34 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Service References\sfExpressService\configuration91.svcinfo" />
+    <None Include="Service References\sfExpressService\configuration.svcinfo" />
+    <None Include="Service References\sfExpressService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="WeatherIndex.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <None Include="Service References\sfExpressService\CommonExpressServiceService.wsdl" />
+    <Content Include="Service References\sfExpressService\WebApplication1.sfExpressService.sfexpressServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Web References\cn.com.webxml.ws\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\cn.com.webxml.ws\WeatherWS.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -230,124 +1249,145 @@
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
       <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
       <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Confirm.aspx.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Confirm.aspx.designer.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Forgot.aspx.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Forgot.aspx.designer.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Lockout.aspx.cs">
       <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Lockout.aspx.designer.cs">
       <DependentUpon>Lockout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Manage.aspx.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Manage.aspx.designer.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ManageLogins.aspx.cs">
       <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\ManageLogins.aspx.designer.cs">
       <DependentUpon>ManageLogins.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ManagePassword.aspx.cs">
       <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\ManagePassword.aspx.designer.cs">
       <DependentUpon>ManagePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\OpenAuthProviders.ascx.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
     <Compile Include="Account\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\RegisterExternalLogin.aspx.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ResetPassword.aspx.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\ResetPassword.aspx.designer.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
       <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
       <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="Ashx\comboboxData.ashx.cs">
+      <DependentUpon>comboboxData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoComboBox.aspx.cs">
+      <DependentUpon>AutoComboBox.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="AutoComboBox.aspx.designer.cs">
+      <DependentUpon>AutoComboBox.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\sfExpressService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -357,6 +1397,7 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
@@ -364,13 +1405,54 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="WeatherIndex.aspx.cs">
+      <DependentUpon>WeatherIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeatherIndex.aspx.designer.cs">
+      <DependentUpon>WeatherIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\cn.com.webxml.ws\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\sfExpressService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JTC.Common\JTC.Common.csproj">
+      <Project>{D2A51DAA-690D-4F0B-91C7-4782A40F3BE3}</Project>
+      <Name>JTC.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://ws.webxml.com.cn/WebServices/WeatherWS.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\cn.com.webxml.ws\</RelPath>
+      <UpdateFromURL>http://ws.webxml.com.cn/WebServices/WeatherWS.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebApplication1_cn_com_webxml_ws_WeatherWS</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
